@@ -4,7 +4,8 @@
     <meta charset="utf-8" />
     <title>Juan Mac Donagh!</title>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-
+    <link rel="icon" type="image/svg+xml" href="assets/molecule.svg">
+    
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
@@ -29,7 +30,7 @@
 
         .header {
         position: relative;
-        z-index: 1;              /* above particles */
+        z-index: 1;              
         height: 100vh;
         display: flex;
         align-items: center;
@@ -51,6 +52,85 @@
         opacity: 0.8;
         }   
 
+        .logos {
+        margin-top: 2rem;
+        display: flex;
+        justify-content: center;  
+        gap: 2.5rem;
+        text-align: left;  
+        /*margin-left: -20rem;*/             
+        }
+
+        .logo {
+        position: relative;
+        cursor: default;
+        }
+
+        .logo img {
+        height: 70px;
+        display: block;
+        filter: drop-shadow(0 0 4px rgba(0,0,0,0.6));
+        }
+
+    
+        .logo::after {
+        content: attr(data-tooltip);
+        position: absolute;
+        left: 50%;
+        bottom: 110%;
+        transform: translateX(-50%) translateY(4px);
+        padding: 0.3rem 0.6rem;
+        border-radius: 6px;
+        background: rgba(0, 0, 0, 0.8);
+        color: #f9fafb;
+        font-size: 0.75rem;
+        white-space: nowrap;
+        opacity: 0;
+        pointer-events: none;
+        transition: opacity 0.18s ease, transform 0.18s ease;
+        }
+
+        .logo:hover::after {
+        opacity: 1;
+        transform: translateX(-50%) translateY(-2px);
+        }
+
+        .cv-button {
+        margin-top: 15rem;       
+        text-align: center;     
+        }
+
+        .btn-cv {
+        display: inline;         
+        padding: 0;            
+        border-radius: 0;       
+        border: none;           
+        background: transparent; 
+        color: #ffffff;
+        text-decoration: none;
+        font-size: 0.85rem;      
+        letter-spacing: 0.04em;
+        text-transform: uppercase;
+        transition: color 0.18s ease, text-decoration-color 0.18s ease;
+        }
+
+        .btn-cv:hover {
+        background: transparent;  
+        box-shadow: none;        
+        transform: none;           
+        text-decoration: underline;
+        color: #d1e0ff;           
+        }
+
+        .btn-cv:active {
+        transform: none;
+        box-shadow: none;
+        }
+
+
+
+
+
     </style>
 
 </head>
@@ -63,8 +143,31 @@
         <div>
         <h1>Juan Mac Donagh</h1>
         <p>knowledge aficionado</p>
+        
+    <div class="logos">
+        <div class="logo" data-tooltip="Bachelor in Molecular Biology and Biotechnology, UNLP.&#10;2015–2021">
+            <img src="assets/unlp_logo.png" alt="UNLP logo">
         </div>
+
+        <div class="logo" data-tooltip="PhD student in Science and Technology, UNQ.&#10;2022–2027">
+            <img src="assets/unq_logo.png" alt="UNQ logo">
+        </div>
+        
+        <div class="logo" data-tooltip="Fully funded PhD fellow, CONICET.&#10;2022–2027">
+            <img src="assets/conicet_logo.png" alt="CONICET logo">
+        </div>
+      
     </div>
+  
+    
+    <div class="cv-button">
+        <a href="assets/cv_jmd.pdf" download class="btn-cv">
+            CV available here
+        </a>
+    </div>
+
+
+    
 
     <script src="js/particles.js"></script>
 
