@@ -33,11 +33,11 @@
         z-index: 1;              
         height: 100vh;
         display: flex;
-        align-items: center;
+        /* align-items: center; */
         justify-content: center;
         text-align: center;
         color: #f5f5f5;
-       
+        padding-top: 6rem; 
         }
 
         .header h1 {
@@ -103,9 +103,50 @@
         transform: translateX(-35%) translateY(-2px);
         }
 
+        .thoughts {
+        margin-top: 1.5rem;
+        display: flex;
+        justify-content: center;
+        gap: 1rem;
+ 
+        }
+
+
+        .thoughts-link {
+        color: #d4d4d8;        
+        text-decoration: none;
+        font-size: 0.85rem;
+        }
+
+        .thoughts-link:hover {
+        text-decoration: underline;
+        color: #ffffff;        
+        }
+
+
+
+        .tag-row {
+        margin-top: 1.5rem;
+        display: flex;
+        justify-content: center;
+        gap: 1rem;
+        transform: translateY(90px);
+        }
+
+        .tag-box {
+        background: #ffffff;
+        color: #000000;
+        padding: 0.4rem 0.9rem;
+        border-radius: 6px;
+        font-size: 0.85rem;
+        letter-spacing: 0.03em;
+        text-transform: none;
+        }
+
         .cv-button {
         margin-top: 15rem;       
-        text-align: center;     
+        text-align: center;   
+        transform: translateY(-90px);  
         }
 
         .btn-cv {
@@ -118,12 +159,12 @@
         text-decoration: none;
         font-size: 0.85rem;      
         letter-spacing: 0.04em;
-        text-transform: uppercase;
+         /*  text-transform: uppercase; */
         transition: color 0.18s ease, text-decoration-color 0.18s ease;
         }
 
         .btn-cv:hover {
-        background: transparent;  
+        background: transparent;    
         box-shadow: none;        
         transform: none;           
         text-decoration: underline;
@@ -168,12 +209,37 @@
         </div>
       
     </div>
-  
-    
-    <div class="cv-button">
-        <a href="assets/cv_jmd.pdf" download class="btn-cv">
-            cv 
+
+    <div class="thoughts">
+        <a href="thoughts.html" class="thoughts-link">
+            thoughts
         </a>
+    </div>
+  
+    <div class="tag-row">
+        <div class="tag-box">Bioinformatics</div>
+        <div class="tag-box">Evolution</div>
+        <div class="tag-box">Proteomics</div>
+        <div class="tag-box">Programing</div>
+        <div class="tag-box">Music</div>
+        <div class="tag-box">Electronics</div>
+    </div>
+    
+<div class="cv-button">
+    <a href="assets/cv_jmd.pdf" download class="btn-cv">
+        cv
+    </a>
+    <span class="link-separator"> · </span>
+    <a href="https://scholar.google.com/citations?user=xbgaqaAAAAAJ&hl" 
+       class="btn-cv" target="_blank" rel="noopener">
+        google scholar
+    </a>
+    <span class="link-separator"> · </span>
+    <a href="https://github.com/Juanmacdonagh17" 
+       class="btn-cv" target="_blank" rel="noopener">
+        GitHub
+    </a>
+</div>
 
     <p class="contact", style="margin-top: 1rem; font-size: 0.9rem;">
         contact: <br> macjuan17@gmail.com
